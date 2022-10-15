@@ -1,21 +1,21 @@
-import React, {ReactNode} from 'react';
-import styles from './index.module.css'
+import React, { ReactNode } from 'react';
+import styles from './index.module.css';
+import cn from 'classnames';
 
 interface IParagraph {
-    size: 'small' | 'medium' | 'big'
-    children: ReactNode
+    size: 'small' | 'medium' | 'large';
+    children: ReactNode;
 }
 
-const Paragraph = ({size,children}: IParagraph) => {
-    switch (size){
-        case "small":
-            return <p className={styles.small}>{children}</p>
-        case "medium":
-            return <p className={styles.medium}>{children}</p>
-        case "big":
-            return <p className={styles.big}>{children}</p>
-    }
-    return <p>{children}</p>;
+export const Paragraph = ({ size, children }: IParagraph) => {
+    return (
+        <p
+            className={cn(styles.paragraph, {
+                [styles.small]: size === 'small',
+                [styles.medium]: size === 'medium',
+                [styles.big]: size === 'large',
+            })}>
+            {children}
+        </p>
+    );
 };
-
-export default Paragraph;
