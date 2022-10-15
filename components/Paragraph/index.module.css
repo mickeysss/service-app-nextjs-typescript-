@@ -1,24 +1,19 @@
 .paragraph {
-	font-family: "Noto Sans", serif;
-
-	font-size: 16px;
-	font-weight: 400;
-	font-style: normal;
+    font-family: "Noto Sans", serif;
+    font-weight: 400;
 }
 
-.big {
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 29px;
+.large {
+    font-size: 18px;
+    line-height: 29px;
 }
 
 .medium {
-	font-family: "Noto Sans", serif;
-	font-size: 14px;
-	line-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .small {
-	font-size: 16px;
-	line-height: 22px;
+    font-size: 14px;
+    line-height: 22px;
 }
